@@ -1,7 +1,4 @@
-package com.loschrix.subsystems;
-
-import com.loschrix.data.Season;
-import com.loschrix.observer.GameEventSystem;
+package FacadeJunimo;
 
 public class WorldClock {
     private int day = 1;

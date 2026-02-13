@@ -1,4 +1,4 @@
-package com.loschrix.data;
+package FacadeJunimo;
 
 public enum Season {
     SPRING("🌸 Wiosna"),

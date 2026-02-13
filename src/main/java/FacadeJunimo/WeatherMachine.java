@@ -1,7 +1,5 @@
-package com.loschrix.subsystems;
+package FacadeJunimo;
 
-import com.loschrix.data.Weather;
-import com.loschrix.observer.GameEventSystem;
 import java.util.Random;
 
 public class WeatherMachine {

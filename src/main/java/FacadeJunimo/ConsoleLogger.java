@@ -1,4 +1,4 @@
-package com.loschrix.observer;
+package FacadeJunimo;
 
 public class ConsoleLogger implements GameObserver {
     @Override

@@ -1,9 +1,4 @@
-package com.loschrix;
-
-import com.loschrix.data.CropType;
-import com.loschrix.observer.ConsoleLogger;
-import com.loschrix.observer.GameEventSystem;
-import com.loschrix.subsystems.FarmSystem;
+package FacadeJunimo;
 
 public class Main {
     static void main() throws InterruptedException {
@@ -34,4 +29,3 @@ public class Main {
         }
     }
 }
-

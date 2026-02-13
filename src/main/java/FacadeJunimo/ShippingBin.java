@@ -1,7 +1,5 @@
-package com.loschrix.subsystems;
+package FacadeJunimo;
 
-import com.loschrix.data.*;
-import com.loschrix.observer.GameEventSystem;
 import java.util.List;
 import java.util.Random;
 

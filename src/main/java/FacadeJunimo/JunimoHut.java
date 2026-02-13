@@ -1,8 +1,5 @@
-package com.loschrix;
+package FacadeJunimo;
 
-import com.loschrix.data.*;
-import com.loschrix.subsystems.*;
-import com.loschrix.observer.GameEventSystem;
 import java.util.List;
 
 public class JunimoHut {

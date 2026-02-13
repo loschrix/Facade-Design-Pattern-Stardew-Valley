@@ -1,4 +1,4 @@
-package com.loschrix.observer;
+package FacadeJunimo;
 
 import java.util.ArrayList;
 import java.util.List;

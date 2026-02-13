@@ -1,4 +1,4 @@
-package com.loschrix.data;
+package FacadeJunimo;
 
 public class PlantedCrop {
     private final CropType type;
