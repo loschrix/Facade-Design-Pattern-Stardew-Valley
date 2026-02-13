@@ -1,13 +1,8 @@
-package com.loschrix;
+package com.loschrix.solved;
 
-import com.loschrix.data.PlantedCrop;
-import com.loschrix.data.Season;
+import com.loschrix.data.*;
+import com.loschrix.subsystems.*;
 import com.loschrix.observer.GameEventSystem;
-import com.loschrix.subsystems.FarmSystem;
-import com.loschrix.subsystems.ShippingBin;
-import com.loschrix.subsystems.WeatherMachine;
-import com.loschrix.subsystems.WorldClock;
-
 import java.util.List;
 
 public class JunimoHut {
@@ -27,14 +22,26 @@ public class JunimoHut {
         this.bin = new ShippingBin(events);
     }
 
-    public void performRoutine() {
+    public void performDailyRoutine() {
         clock.nextDay();
+        Season currentSeason = clock.getSeason();
+        weather.generateForecast();
 
-        if (!weather.isRaining()) {
+        if (weather.isRaining()) {
+            events.notify("🌧️ Pada! Junimo tańczą w deszczu.");
+            farm.waterByRain();
+        } else {
             farm.waterByJunimo();
         }
-        weather.generateForecast();
+
+        farm.simulateGrowth(currentSeason);
+
+        List<PlantedCrop> harvest = farm.harvestReady();
+        if (!harvest.isEmpty()) {
+            bin.ship(harvest);
+        } else {
+            events.notify("💤 Brak zbiorów dzisiaj.");
+        }
+        events.notify("----------------------------------------");
     }
-
-
 }
